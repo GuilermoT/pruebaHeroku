@@ -11,12 +11,12 @@
             <input type="submit" value="Calcular tabla de multiplicar"/>
         </form>
     </body>
-    </html>
+
 
 
 
 <table align = "center" border = '1' width = "100%">
-
+    </html>
 <?php
     function printMultiplicationTable($number){
         for($i = 0; $i <= 10; $i++){
