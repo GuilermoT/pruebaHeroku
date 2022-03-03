@@ -5,7 +5,7 @@
 <body>
     <center>
         <h1>Tabla de multiplicar</h1>
-        <form action="ej6.php" method="GET">
+        <form action="index.php" method="GET">
             <input type="number" name="cajaNumero" required>
             <input type="submit" value="Crear tabla">
         </form>
