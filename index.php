@@ -1,32 +1,37 @@
-<Doctype html>
-    <html>
-        <head>
-            <meta charset='utf-8' > 
-    <title></title>
-        </head>
-    <body>
-        <form action="e6.php" method="post">
-            <label>Inserta un número:</label><br>
-            <input type="number" id="number" name="number" placeholders="Inserta un número:"/>
-            <input type="submit" value="Calcular tabla de multiplicar"/>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <center>
+        <h1>Tabla de multiplicar</h1>
+        <form action="ej6.php" method="GET">
+            <input type="number" name="cajaNumero" required>
+            <input type="submit" value="Crear tabla">
         </form>
-    </body>
 
-
-
-
-<table align = "center" border = '1' width = "100%">
-    </html>
 <?php
-    function printMultiplicationTable($number){
-        for($i = 0; $i <= 10; $i++){
-            echo "<tr>";
-            $multiplicationTable = ($i * $number);
-            echo "<td>$number  x $i =  $multiplicationTable </td>";
-            echo "<tr/>";
-        }
+
+if (isset($_GET['cajaNumero']))
+{
+    $numeroingresado = $_GET['cajaNumero'];
+    echo "<table border='1'><br>";
+    echo "<h3>Tabla del $numeroingresado </h3>";
+
+    for($i=1; $i <=12; $i++)
+    {
+
+    $valor = $i*$numeroingresado;
+    echo "<tr>";
+    echo "<td> $i X $numeroingresado </td>";
+    echo "<td>$valor</td>";
+    echo "</tr>";
     }
 
-    $number = $_POST['number'];
-    printMultiplicationTable($number);
+    echo "</table>";
+
+}
 ?>
+    </center>
+</body>
+</html>
